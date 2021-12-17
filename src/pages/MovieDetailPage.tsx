@@ -26,7 +26,7 @@ const MovieDetailPage: React.FC<MovieDetailPageProps> = ({}) => {
   const getSingleMovie = async () => {
     setMovieLoading(true);
     const fetchRes = await fetch(
-      `${apiBaseURL}/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}`
+      `${apiBaseURL}/movie/${movieId}?api_key=d4f7b87d7cedfdfbbb297f46aa3e8779`
     );
     const fetchedMovie = (await fetchRes.json()) as Movie;
     console.log(fetchedMovie);

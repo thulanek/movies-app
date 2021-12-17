@@ -42,7 +42,7 @@ const MoviesContextProvider: React.FC = ({ children }) => {
     if (moviesLoading && !initialLoad) return;
     setMoviesState((prev) => ({ ...prev, moviesLoading: true }));
     const fetchRes = await fetch(
-      `${apiBaseURL}/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${paginationPageNum}`
+      `${apiBaseURL}/movie/popular?api_key=d4f7b87d7cedfdfbbb297f46aa3e8779&language=en-US&page=${paginationPageNum}`
     );
     const fetchMoviesRes = await fetchRes.json();
 
@@ -70,7 +70,7 @@ const MoviesContextProvider: React.FC = ({ children }) => {
     setGenresLoading(true);
 
     const fetchRes = await fetch(
-      `${apiBaseURL}/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}`
+      `${apiBaseURL}/genre/movie/list?api_key=d4f7b87d7cedfdfbbb297f46aa3e8779`
     );
     const fetchGenresRes = await fetchRes.json();
 
