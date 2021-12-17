@@ -1,0 +1,120 @@
+@import "variables";
+
+.movie-detail-page-container {
+  .movie-details-wrapper {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: $detailPageMobileWidth) {
+      grid-template-columns: 1fr;
+      flex-direction: column;
+    }
+
+    .detail-image-container {
+      width: 100%;
+      max-width: 400px;
+
+      @media (max-width: $detailPageMobileWidth) {
+        display: flex;
+        justify-content: center;
+        max-width: initial;
+      }
+
+      .detail-main-img {
+        width: 90%;
+        max-width: 400px;
+        min-height: 250px;
+        border-radius: 10px;
+        background-color: #aaa;
+
+        @media (max-width: $detailPageMobileWidth) {
+          width: 60vw;
+        }
+      }
+    }
+
+    .movie-details-container {
+      max-width: 600px;
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+
+      @media (max-width: $detailPageMobileWidth) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: initial;
+      }
+
+      .detail-movie-name {
+        font-family: $headingFont;
+        line-height: 40px;
+
+        @media (max-width: $detailPageMobileWidth) {
+          text-align: center;
+          margin: 10px 0;
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
+
+      .detail-movie-rating {
+        width: fit-content;
+        padding: 3px 8px;
+        margin: 8px 0;
+
+        @media (max-width: $detailPageMobileWidth) {
+          margin: 8px auto;
+        }
+      }
+
+      .detail-favourite-movie-container {
+        margin: 10px 0px;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        @media (max-width: $detailPageMobileWidth) {
+          justify-content: center;
+        }
+      }
+
+      .movie-description {
+        @media (max-width: $detailPageMobileWidth) {
+          text-align: center;
+        }
+      }
+
+      .genres-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+
+        @media (max-width: $detailPageMobileWidth) {
+          justify-content: center;
+        }
+      }
+
+      .detail-movie-genre {
+        padding: 5px 10px;
+        border-radius: 1000px;
+        background-color: #aaa;
+        color: #fff;
+      }
+    }
+  }
+  .detail-loading-icon-container {
+    // background-color: red;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .detail-loading-icon {
+      width: 150px;
+      filter: grayscale(1) contrast(3);
+    }
+  }
+}

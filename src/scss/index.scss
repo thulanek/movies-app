@@ -1,0 +1,29 @@
+@import "variables";
+@import "app";
+@import "headerFooter";
+@import "movieDetailPage";
+@import "aboutPage";
+@import "movieList";
+@import "homepage";
+@import "trelloForm";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $bodyFont;
+  color: $textc;
+  background-color: $bgc;
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

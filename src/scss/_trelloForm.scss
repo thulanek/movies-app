@@ -1,0 +1,128 @@
+.trello-form-container {
+  margin-top: 18px;
+
+  @media (max-width: $detailPageMobileWidth) {
+    margin-top: 40px;
+  }
+
+  .trello-form {
+    max-width: 350px;
+    width: 90%;
+
+    @media (max-width: $detailPageMobileWidth) {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .trello-form-error-msg {
+      margin-top: 5px;
+      margin-bottom: -10px;
+    }
+
+    .trello-form-heading {
+    }
+
+    .trello-form-input-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-top: 10px;
+      margin-top: 10px;
+
+      .trello-form-label {
+        opacity: 0;
+      }
+
+      .trello-form-input {
+        border: 0;
+        padding: 0;
+        z-index: 1;
+        background-color: transparent;
+        border-bottom: 2px solid #777777;
+        font: inherit;
+        font-size: 18px;
+        line-height: 30px;
+        outline: 0;
+
+        &:focus,
+        &:valid {
+        }
+      }
+    }
+
+    .trello-form-input-error-message {
+      color: #f12525;
+      letter-spacing: 2px;
+      margin-top: 3px;
+    }
+
+    .trello-form-submit-btn {
+      border-radius: 1000px;
+      padding: 5px 10px;
+      background-color: dodgerblue;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-family: $bodyFont;
+      text-transform: uppercase;
+      color: #fff;
+      margin-top: 20px;
+    }
+  }
+
+  .trello-form-loading-container {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #797979bd;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .trello-form-loading-text {
+      margin-top: -20px;
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: 5px;
+
+      @media (max-width: $detailPageMobileWidth) {
+        letter-spacing: 2px;
+      }
+    }
+
+    .trello-form-loading-img {
+      width: 150px;
+      filter: grayscale(1) contrast(2);
+    }
+  }
+
+  .trello-form-submitted-container {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    @media (max-width: $detailPageMobileWidth) {
+      flex-direction: column;
+    }
+
+    .trello-form-submitted-text {
+      font-size: 28px;
+
+      @media (max-width: $detailPageMobileWidth) {
+        font-size: 22px;
+      }
+    }
+
+    .trello-form-submitted-img {
+      border-radius: 1000px;
+      background-color: #fff;
+      width: 25px;
+    }
+  }
+}

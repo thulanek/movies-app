@@ -1,0 +1,165 @@
+@import "variables";
+
+$cardWidth: 160px;
+$cardBorderRadius: 20px;
+
+.movies-list-wrapper {
+  .movies-list-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 10px;
+    margin-top: 20px;
+
+    @media (max-width: $mobile) {
+      column-gap: 25px;
+    }
+
+    .movie-card-container {
+      max-width: $cardWidth;
+
+      .movie-card-img-container {
+        position: relative;
+        overflow: hidden;
+        transition: transform 150ms ease;
+        width: 100%;
+        min-height: 250px;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: transform 150ms ease;
+        }
+        .movie-card-thumbnail {
+          background-color: #9c9c9c;
+          cursor: pointer;
+          width: 100%;
+          min-width: $cardWidth;
+          min-height: 250px;
+          height: 100%;
+          border-radius: $cardBorderRadius;
+          box-shadow: 0 0 10px #00000000;
+        }
+
+        .movie-card-sash-container {
+          position: absolute;
+          width: 200px;
+          top: 40px;
+          right: -60px;
+          transform-origin: center center;
+          transform: rotateZ(55deg);
+          height: 20px;
+
+          .movie-card-sash {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #fff;
+
+            .movie-card-rating {
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .movie-card-name {
+        font-size: 15px;
+        margin: 5px 0;
+      }
+    }
+
+    .movie-card-skeleton-container {
+      .movie-card-skeleton-img {
+      }
+      .movie-card-skeleton-text {
+      }
+    }
+
+    .intersection-observer-container {
+      width: 1000px;
+      height: 40px;
+      background-color: $bgc;
+    }
+  }
+
+  .loading-reel-wrapper {
+    margin-top: 5px;
+
+    .loading-reel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .loading-reel {
+        width: 30px;
+
+        animation-name: reelRotation;
+        animation-iteration-count: infinite;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+      }
+    }
+  }
+}
+
+.loading-skeletons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 20px;
+  margin-top: 20px;
+
+  .movie-card-skeleton-container {
+    width: $cardWidth;
+
+    .movie-card-skeleton-img {
+      background-color: #aaa;
+      width: 100%;
+      height: 250px;
+      border-radius: $cardBorderRadius;
+    }
+    .movie-card-skeleton-text {
+      margin: 10px 0;
+      background-color: #aaa;
+      width: 100%;
+      border-radius: 1000px;
+      height: 15px;
+    }
+    .movie-card-skeleton-text-2 {
+      width: 80%;
+    }
+  }
+}
+
+.no-list-content-container {
+  // background-color: red;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .no-list-content-text {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .no-list-content-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 17px;
+    border-radius: 1000px;
+  }
+}
+
+@keyframes reelRotation {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(359deg);
+  }
+}

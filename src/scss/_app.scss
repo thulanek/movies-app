@@ -1,0 +1,36 @@
+@import "variables";
+
+.page {
+  padding-top: 20px;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  min-height: calc(100vh - 95px);
+
+  .page-heading {
+    font-family: $headingFont;
+    font-size: 44px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 40px;
+  }
+
+  .description {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .heart-icon {
+    translate: all 3000ms ease;
+    cursor: pointer;
+
+    &:hover {
+      translate: all 3000ms ease;
+      transform: scale(1.2);
+    }
+  }
+}

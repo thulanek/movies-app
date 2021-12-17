@@ -1,0 +1,37 @@
+// LIGHT MODE STYLES
+:root {
+  --bg-colour: #e7e7e7;
+  --trim-colour: #ff8f5f;
+  --text-colour: #000000;
+}
+
+// DARK MODE STYLES
+.dark-mode {
+  --bg-colour: #020202;
+  --trim-colour: #647fd3;
+  --text-colour: #ffffff;
+}
+
+// USING CSS VARIABLES TO ASSIGN STYLE PROPERTIES
+$bgc: var(--bg-colour);
+$textc: var(--text-colour);
+$themec: var(--trim-colour);
+
+// FONTS IMPORTS
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Questrial&display=swap");
+
+// FONTS
+$headingFont: "Noto Serif", serif;
+$bodyFont: "Questrial", sans-serif;
+
+// MEDIA QUERY VARIABLES
+$mobile: 500px;
+
+@mixin disableOnTablet {
+  @media (min-width: $mobile) {
+    display: none;
+  }
+}
+
+// VARS
+$detailPageMobileWidth: 650px;
